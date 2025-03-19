@@ -1,0 +1,18 @@
+<div class="form-container">
+  <form [formGroup]="taskForm" (ngSubmit)="submit()">
+    <label for="title">Título</label>
+    <input id="title" type="text" formControlName="title" required />
+
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      formControlName="description"
+      required
+    ></textarea>
+
+    <button type="submit">Guardar</button>
+    <button type="button" class="cancel" (click)="closeForm()">
+      Cancelar
+    </button>
+  </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of dataTasks">
+        <td>{{ task.name }}</td>
+        <td>{{ task.description }}</td>
+        <td>
+          <select
+            [(ngModel)]="(task.status)"
+            (change)="updateStatus(task, $event)"
+          >
+            <option *ngFor="let status of statuses" [value]="status">
+              {{ status | statusTask }}
+            </option>
+          </select>
+        </td>
+        <td>
+          <button (click)="editTask(task)" class="edit">Edit</button>
+          <button (click)="deleteTask(task.uid)" class="delete">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

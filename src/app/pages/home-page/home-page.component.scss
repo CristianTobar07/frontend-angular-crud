@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.home-container {
+  display: flex;
+  width: 95vw;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_form_table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-container,
+.table-container {
+  flex: 1;
+  min-width: 45%;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0 10px;
+    width: max-content;
+  }
+
+  .container_form_table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container,
+  .table-container {
+    width: 90%;
+  }
+}

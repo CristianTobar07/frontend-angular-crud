@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.header {
+  background: $primary;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-width: 350px;
+  margin-bottom: 2rem; 
+}
+
+.header-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #f0f0f0;
+}
+
+.author span {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .author {
+    font-size: 0.8rem;
+  }
+}
