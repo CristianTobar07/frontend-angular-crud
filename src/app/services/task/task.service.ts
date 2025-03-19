@@ -17,7 +17,7 @@ export class TaskService {
   constructor(private http: HttpClient) {}
 
   getAllTasks(): Observable<Task[]> {
-    this.http.get<ResponseGetAllTasks>(BASE_URL + 'tasks/all_tasks').subscribe({
+    this.http.get<ResponseGetAllTasks>('/tasks/all_tasks').subscribe({
       next: (response) => {
         this._dataTasks$.next(response.data);
       },
